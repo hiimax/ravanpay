@@ -21,6 +21,11 @@ class _ChartsOrderbookTradesState extends State<ChartsOrderbookTrades>
   @override
   void initState() {
     _tabController = TabController(length: 3, vsync: this);
+    _tabController?.addListener(() {
+      if (_tabController?.indexIsChanging != true) {
+        toggleTabs(_tabController?.index);
+      }
+    });
     super.initState();
   }
 
@@ -39,6 +44,13 @@ class _ChartsOrderbookTradesState extends State<ChartsOrderbookTrades>
     setState(() {
       index = value;
     });
+  }
+
+  @override
+  void dispose() {
+    _tabController?.dispose();
+
+    super.dispose();
   }
 
   @override
@@ -156,14 +168,14 @@ class _ChartsOrderbookTradesState extends State<ChartsOrderbookTrades>
                     );
                   },
                 ),
-              Expanded(
+              Flexible(
                 child: Padding(
                   padding: REdgeInsets.all(16.0),
                   child: TabBarView(
                     controller: _tabController,
-                    children: [
-                      const Charts(),
-                      const OrderBooks(),
+                    children: const [
+                      Charts(),
+                      OrderBooks(),
                       RecentTrades(),
                     ],
                   ),

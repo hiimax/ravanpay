@@ -1,8 +1,8 @@
 import '../../../../res/import/import.dart';
 
 class RecentTrades extends StatelessWidget {
-  RecentTrades({super.key});
-  int Index = 0;
+  const RecentTrades({super.key});
+
 
   @override
   Widget build(BuildContext context) {

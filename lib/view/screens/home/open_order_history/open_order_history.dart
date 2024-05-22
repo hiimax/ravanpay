@@ -17,6 +17,11 @@ class _OpenOrderHistoryState extends State<OpenOrderHistory>
   @override
   void initState() {
     _tabController = TabController(length: 3, vsync: this);
+    _tabController?.addListener(() {
+      if (_tabController?.indexIsChanging != true) {
+        toggleTabs(_tabController?.index);
+      }
+    });
     super.initState();
   }
 

@@ -21,6 +21,11 @@ class _BuySellBottomSheetState extends State<BuySellBottomSheet>
   @override
   void initState() {
     _tabController = TabController(length: 2, vsync: this);
+    _tabController?.addListener(() {
+      if (_tabController?.indexIsChanging != true) {
+        toggleTabs(_tabController?.index);
+      }
+    });
     super.initState();
   }
 
