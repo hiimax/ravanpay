@@ -1,0 +1,88 @@
+name: raven
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.5
+
+  #state management
+  provider: ^6.0.5
+
+  # Utils
+  page_transition: ^2.0.9
+  image_picker: ^1.1.1
+
+
+  # local DB
+  path_provider: ^2.0.15
+  shared_preferences: ^2.1.1
+ 
+
+
+
+
+  # connectivity
+  connectivity_plus: ^6.0.3
+  http_parser: ^4.0.2
+ 
+  
+  platform_device_id: ^1.0.1
+  diox: ^5.0.0
+ 
+  
+  hive: ^2.2.3
+  logger: ^2.3.0
+  flutter_dotenv: ^5.1.0
+  candlesticks: ^2.1.0
+  http: ^1.2.1
+  web_socket_channel: ^3.0.0
+  intl: ^0.17.0
+  flutter_screenutil: ^5.0.0+2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+icons_launcher:
+  image_path: 'assets/images/ecoKrib_logo.png'
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/fonts/
+    - assets/images/
+
+  fonts:
+    - family: Satoshi
+      fonts:
+        - asset: assets/fonts/Satoshi-Black.otf
+        - asset: assets/fonts/Satoshi-Bold.otf
+        - asset: assets/fonts/Satoshi-BlackItalic.otf
+        - asset: assets/fonts/Satoshi-BoldItalic.otf
+        - asset: assets/fonts/Satoshi-Italic.otf
+        - asset: assets/fonts/Satoshi-Light.otf
+        - asset: assets/fonts/Satoshi-LightItalic.otf
+        - asset: assets/fonts/Satoshi-Medium.otf
+        - asset: assets/fonts/Satoshi-MediumItalic.otf
+        - asset: assets/fonts/Satoshi-Regular.otf
+
+        
