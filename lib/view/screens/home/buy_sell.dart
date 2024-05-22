@@ -242,7 +242,7 @@ class _BuySellBottomSheetState extends State<BuySellBottomSheet>
                       ),
                       child: Center(
                         child: Text(
-                          Index != 1 ? 'Buy BTC' : 'Sell BTC',
+                          _selectedIndex != 1 ? 'Buy BTC' : 'Sell BTC',
                           style: RavenTextStyle.size12.copyWith(
                             color: ravenWhite,
                           ),
